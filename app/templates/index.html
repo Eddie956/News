@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+{% import 'macro.html as macro %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"> {% if title %}
+    <title> {{ news }}</title>
+    {% else %}
+    news = 'Home - This is the News Highligh'
+    {% endif %}
+</head>
+
+{% block content %}
+<body>
+    
+    <!-- Business News section  -->    <ul>
+        <h3> Popular Movies</h3>
+
+    </ul>
+        {{ macro.displayNewsList(business_news)}}
+
+
+    <!-- Entertainment News  -->    
+    <ul>
+        <h3> Entertainment News </h3>
+    </ul>
+        {{ macro.displayNewsList(entertainment_news)}}
+
+    <!-- General News -->    
+    <ul>
+        <h3> General News </h3>
+    </ul>
+        {{ macro.displayNewsList(general_news)}}
+
+    <!-- Health News  -->    
+    <ul>
+        <h3> Health News </h3>
+    </ul>
+        {{ macro.displayNewsList(health_news)}}
+
+    <!-- Science News -->    
+    <ul>
+        <h3> Science News </h3>
+    </ul>
+        {{ macro.displayNewsList(science_news)}}
+
+    <!-- Sports News  -->   
+    <ul>
+        <h3> Sport News </h3>
+    </ul>
+        {{ macro.displayNewsList(sports_news)}}
+
+    <!-- Technology News -->   
+    <ul>
+        <h3>Technology News</h3>
+    </ul>
+        {{ macro.displayNewsList(technology_news)}}
+
+</body>
+{% endblock %}
+
+</html>
